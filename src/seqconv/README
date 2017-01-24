@@ -1,0 +1,5 @@
+Some of the files are not used in the 16S pipeline but 
+were used in some manual QC step or mixing experiments
+for validating the 16S pipeline.
+cpfasqpart can do random sampling.
+

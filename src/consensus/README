@@ -1,0 +1,7 @@
+This library is for dealing with consensus sequences. There are diffeerent kinds of 
+consensus. Some rely on references others use only reference as a guide. This 
+library contains consensus without using any references. The original library
+was developed for generic consensus building from a family of sequences. 
+This version is modified to work with amplicon sequences.  Also aded are
+the graphics output. The graphics output is a simple wrapper around the 
+gnu plotutils library.

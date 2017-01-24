@@ -1,0 +1,19 @@
+This project contains the basic utilities for doing sequence analyssis.  Only
+C++ source codes are integrated with the autotools.  The original project
+contains large fraction of perl code that will be added into the autotool
+framework in future releases.
+
+For must users, just download the *.tar.gz file and untar it.
+do ./configure
+make
+make install
+should be sufficient.
+
+If any dependency is needed install the dependency:
+
+  1. Orpara
+  2. Bamtools (I branched the original project and added some
+    interface functions)
+
+Both are from my git hub page.
+
