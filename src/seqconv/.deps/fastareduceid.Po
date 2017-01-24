@@ -108,8 +108,9 @@ fastareduceid.o: fastareduceid.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/5/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/5/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/5/bits/c++io.h \
- /usr/include/c++/5/bits/fstream.tcc /usr/local/include/orpara/bioseq.h \
- /usr/include/c++/5/map /usr/include/c++/5/bits/stl_tree.h \
+ /usr/include/c++/5/bits/fstream.tcc \
+ /usr/local/include/orpara16s/bioseq.h /usr/include/c++/5/map \
+ /usr/include/c++/5/bits/stl_tree.h \
  /usr/include/c++/5/ext/aligned_buffer.h \
  /usr/include/c++/5/bits/stl_map.h /usr/include/c++/5/tuple \
  /usr/include/c++/5/utility /usr/include/c++/5/bits/stl_relops.h \
@@ -192,8 +193,9 @@ fastareduceid.o: fastareduceid.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/5/bits/random.tcc /usr/include/c++/5/numeric \
  /usr/include/c++/5/bits/stl_numeric.h /usr/include/c++/5/list \
  /usr/include/c++/5/bits/stl_list.h /usr/include/c++/5/bits/list.tcc \
- /usr/local/include/orpara/range.h /usr/local/include/orpara/interval.h \
- /usr/local/include/orpara/codon.h /usr/include/c++/5/set \
+ /usr/local/include/orpara16s/range.h \
+ /usr/local/include/orpara16s/interval.h \
+ /usr/local/include/orpara16s/codon.h /usr/include/c++/5/set \
  /usr/include/c++/5/bits/stl_set.h /usr/include/c++/5/bits/stl_multiset.h
 
 /usr/include/stdc-predef.h:
@@ -490,7 +492,7 @@ fastareduceid.o: fastareduceid.cpp /usr/include/stdc-predef.h \
 
 /usr/include/c++/5/bits/fstream.tcc:
 
-/usr/local/include/orpara/bioseq.h:
+/usr/local/include/orpara16s/bioseq.h:
 
 /usr/include/c++/5/map:
 
@@ -686,11 +688,11 @@ fastareduceid.o: fastareduceid.cpp /usr/include/stdc-predef.h \
 
 /usr/include/c++/5/bits/list.tcc:
 
-/usr/local/include/orpara/range.h:
+/usr/local/include/orpara16s/range.h:
 
-/usr/local/include/orpara/interval.h:
+/usr/local/include/orpara16s/interval.h:
 
-/usr/local/include/orpara/codon.h:
+/usr/local/include/orpara16s/codon.h:
 
 /usr/include/c++/5/set:
 

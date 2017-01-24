@@ -68,19 +68,19 @@
 #define LT_OBJDIR ".libs/"
 
 /* Name of package */
-#define PACKAGE "orparapp"
+#define PACKAGE "orparapp16s"
 
 /* Define to the address where bug reports for this package should be sent. */
 #define PACKAGE_BUGREPORT "kmzhou4@yahoo.com"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "orparapp"
+#define PACKAGE_NAME "orparapp16s"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "orparapp 0.1.0"
+#define PACKAGE_STRING "orparapp16s 0.1.0"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "orparapp"
+#define PACKAGE_TARNAME "orparapp16s"
 
 /* Define to the home page for this package. */
 #define PACKAGE_URL ""

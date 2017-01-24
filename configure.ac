@@ -211,9 +211,6 @@ AC_CHECK_FUNCS([floor mkdir pow strchr strstr])
 AC_CONFIG_FILES([Makefile
                  src/Makefile
 					  src/consensus/Makefile
-                 src/seqana/Makefile
-                 src/seqana/fasta/Makefile
-                 src/seqana/seqsep/Makefile
                  src/seqconv/Makefile
                  src/test/Makefile])
 AC_OUTPUT

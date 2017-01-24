@@ -1,2 +1,0 @@
-source files needed by the 16S pipeline only, so the make files are simplified
-but still keep the directory structure.

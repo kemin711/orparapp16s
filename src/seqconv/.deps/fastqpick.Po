@@ -109,12 +109,12 @@ fastqpick.o: fastqpick.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/5/set /usr/include/c++/5/bits/stl_tree.h \
  /usr/include/c++/5/ext/aligned_buffer.h \
  /usr/include/c++/5/bits/stl_set.h /usr/include/c++/5/bits/stl_multiset.h \
- /usr/local/include/orpara/fastq.h /usr/include/c++/5/vector \
+ /usr/local/include/orpara16s/fastq.h /usr/include/c++/5/vector \
  /usr/include/c++/5/bits/stl_construct.h \
  /usr/include/c++/5/bits/stl_uninitialized.h \
  /usr/include/c++/5/bits/stl_vector.h \
  /usr/include/c++/5/bits/stl_bvector.h /usr/include/c++/5/bits/vector.tcc \
- /usr/local/include/orpara/stddev.h /usr/include/c++/5/utility \
+ /usr/local/include/orpara16s/stddev.h /usr/include/c++/5/utility \
  /usr/include/c++/5/bits/stl_relops.h /usr/include/c++/5/cmath \
  /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -425,7 +425,7 @@ fastqpick.o: fastqpick.cpp /usr/include/stdc-predef.h \
 
 /usr/include/c++/5/bits/stl_multiset.h:
 
-/usr/local/include/orpara/fastq.h:
+/usr/local/include/orpara16s/fastq.h:
 
 /usr/include/c++/5/vector:
 
@@ -439,7 +439,7 @@ fastqpick.o: fastqpick.cpp /usr/include/stdc-predef.h \
 
 /usr/include/c++/5/bits/vector.tcc:
 
-/usr/local/include/orpara/stddev.h:
+/usr/local/include/orpara16s/stddev.h:
 
 /usr/include/c++/5/utility:
 

@@ -88,15 +88,9 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-bin_PROGRAMS = bam2cleanfastq$(EXEEXT) checkdupfasq$(EXEEXT) \
-	checkdupfasta$(EXEEXT) cpfasqpart$(EXEEXT) \
-	cpfastapart$(EXEEXT) fastareduceid$(EXEEXT) \
-	fastq2fasta$(EXEEXT) fastq2tab$(EXEEXT) fastqpick$(EXEEXT) \
-	fastqreduceid$(EXEEXT) fastqstat$(EXEEXT) fishing$(EXEEXT) \
-	linearize$(EXEEXT) parsencbi16s$(EXEEXT) parsencbissu$(EXEEXT) \
-	parsepatricssu$(EXEEXT) parserdpssu$(EXEEXT) \
-	parsesilvassu$(EXEEXT) revcomp$(EXEEXT) rna2dna$(EXEEXT) \
-	tandemcount$(EXEEXT) trimfastq$(EXEEXT)
+bin_PROGRAMS = cpfasqpart$(EXEEXT) cpfastapart$(EXEEXT) \
+	fastareduceid$(EXEEXT) fastqpick$(EXEEXT) \
+	fastqreduceid$(EXEEXT) fastqstat$(EXEEXT)
 subdir = src/seqconv
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
@@ -112,32 +106,15 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_bam2cleanfastq_OBJECTS = bam2cleanfastq-bam2cleanfastq.$(OBJEXT)
-bam2cleanfastq_OBJECTS = $(am_bam2cleanfastq_OBJECTS)
+am_cpfasqpart_OBJECTS = cpfasqpart.$(OBJEXT)
+cpfasqpart_OBJECTS = $(am_cpfasqpart_OBJECTS)
+cpfasqpart_LDADD = $(LDADD)
 am__DEPENDENCIES_1 =
-am__DEPENDENCIES_2 = $(am__DEPENDENCIES_1)
-bam2cleanfastq_DEPENDENCIES = $(am__DEPENDENCIES_2) \
-	$(am__DEPENDENCIES_1)
+cpfasqpart_DEPENDENCIES = $(am__DEPENDENCIES_1)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
 am__v_lt_1 = 
-bam2cleanfastq_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
-	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
-	$(bam2cleanfastq_CXXFLAGS) $(CXXFLAGS) \
-	$(bam2cleanfastq_LDFLAGS) $(LDFLAGS) -o $@
-am_checkdupfasq_OBJECTS = checkdupfasq.$(OBJEXT)
-checkdupfasq_OBJECTS = $(am_checkdupfasq_OBJECTS)
-checkdupfasq_LDADD = $(LDADD)
-checkdupfasq_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_checkdupfasta_OBJECTS = checkdupfasta.$(OBJEXT)
-checkdupfasta_OBJECTS = $(am_checkdupfasta_OBJECTS)
-checkdupfasta_LDADD = $(LDADD)
-checkdupfasta_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_cpfasqpart_OBJECTS = cpfasqpart.$(OBJEXT)
-cpfasqpart_OBJECTS = $(am_cpfasqpart_OBJECTS)
-cpfasqpart_LDADD = $(LDADD)
-cpfasqpart_DEPENDENCIES = $(am__DEPENDENCIES_1)
 am_cpfastapart_OBJECTS = cpfastapart.$(OBJEXT)
 cpfastapart_OBJECTS = $(am_cpfastapart_OBJECTS)
 cpfastapart_LDADD = $(LDADD)
@@ -146,14 +123,6 @@ am_fastareduceid_OBJECTS = fastareduceid.$(OBJEXT)
 fastareduceid_OBJECTS = $(am_fastareduceid_OBJECTS)
 fastareduceid_LDADD = $(LDADD)
 fastareduceid_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_fastq2fasta_OBJECTS = fastq2fasta.$(OBJEXT)
-fastq2fasta_OBJECTS = $(am_fastq2fasta_OBJECTS)
-fastq2fasta_LDADD = $(LDADD)
-fastq2fasta_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_fastq2tab_OBJECTS = fastq2tab.$(OBJEXT)
-fastq2tab_OBJECTS = $(am_fastq2tab_OBJECTS)
-fastq2tab_LDADD = $(LDADD)
-fastq2tab_DEPENDENCIES = $(am__DEPENDENCIES_1)
 am_fastqpick_OBJECTS = fastqpick.$(OBJEXT)
 fastqpick_OBJECTS = $(am_fastqpick_OBJECTS)
 fastqpick_LDADD = $(LDADD)
@@ -166,54 +135,6 @@ am_fastqstat_OBJECTS = fastqstat.$(OBJEXT)
 fastqstat_OBJECTS = $(am_fastqstat_OBJECTS)
 fastqstat_LDADD = $(LDADD)
 fastqstat_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_fishing_OBJECTS = fishing-fishing.$(OBJEXT)
-fishing_OBJECTS = $(am_fishing_OBJECTS)
-fishing_DEPENDENCIES = $(am__DEPENDENCIES_2) $(am__DEPENDENCIES_1)
-fishing_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(fishing_CXXFLAGS) \
-	$(CXXFLAGS) $(fishing_LDFLAGS) $(LDFLAGS) -o $@
-am_linearize_OBJECTS = linearize-linearize.$(OBJEXT)
-linearize_OBJECTS = $(am_linearize_OBJECTS)
-linearize_DEPENDENCIES = $(am__DEPENDENCIES_2) $(am__DEPENDENCIES_1)
-linearize_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(linearize_CXXFLAGS) \
-	$(CXXFLAGS) $(linearize_LDFLAGS) $(LDFLAGS) -o $@
-am_parsencbi16s_OBJECTS = parsencbi16s.$(OBJEXT)
-parsencbi16s_OBJECTS = $(am_parsencbi16s_OBJECTS)
-parsencbi16s_LDADD = $(LDADD)
-parsencbi16s_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_parsencbissu_OBJECTS = parsencbissu.$(OBJEXT)
-parsencbissu_OBJECTS = $(am_parsencbissu_OBJECTS)
-parsencbissu_LDADD = $(LDADD)
-parsencbissu_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_parsepatricssu_OBJECTS = parsepatricssu.$(OBJEXT)
-parsepatricssu_OBJECTS = $(am_parsepatricssu_OBJECTS)
-parsepatricssu_LDADD = $(LDADD)
-parsepatricssu_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_parserdpssu_OBJECTS = parserdpssu.$(OBJEXT)
-parserdpssu_OBJECTS = $(am_parserdpssu_OBJECTS)
-parserdpssu_LDADD = $(LDADD)
-parserdpssu_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_parsesilvassu_OBJECTS = parsesilvassu.$(OBJEXT)
-parsesilvassu_OBJECTS = $(am_parsesilvassu_OBJECTS)
-parsesilvassu_LDADD = $(LDADD)
-parsesilvassu_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_revcomp_OBJECTS = revcomp.$(OBJEXT)
-revcomp_OBJECTS = $(am_revcomp_OBJECTS)
-revcomp_LDADD = $(LDADD)
-revcomp_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_rna2dna_OBJECTS = rna2dna.$(OBJEXT)
-rna2dna_OBJECTS = $(am_rna2dna_OBJECTS)
-rna2dna_LDADD = $(LDADD)
-rna2dna_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_tandemcount_OBJECTS = tandemcount.$(OBJEXT)
-tandemcount_OBJECTS = $(am_tandemcount_OBJECTS)
-tandemcount_LDADD = $(LDADD)
-tandemcount_DEPENDENCIES = $(am__DEPENDENCIES_1)
-am_trimfastq_OBJECTS = trimfastq.$(OBJEXT)
-trimfastq_OBJECTS = $(am_trimfastq_OBJECTS)
-trimfastq_LDADD = $(LDADD)
-trimfastq_DEPENDENCIES = $(am__DEPENDENCIES_1)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -248,26 +169,12 @@ AM_V_CXXLD = $(am__v_CXXLD_@AM_V@)
 am__v_CXXLD_ = $(am__v_CXXLD_@AM_DEFAULT_V@)
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(bam2cleanfastq_SOURCES) $(checkdupfasq_SOURCES) \
-	$(checkdupfasta_SOURCES) $(cpfasqpart_SOURCES) \
-	$(cpfastapart_SOURCES) $(fastareduceid_SOURCES) \
-	$(fastq2fasta_SOURCES) $(fastq2tab_SOURCES) \
-	$(fastqpick_SOURCES) $(fastqreduceid_SOURCES) \
-	$(fastqstat_SOURCES) $(fishing_SOURCES) $(linearize_SOURCES) \
-	$(parsencbi16s_SOURCES) $(parsencbissu_SOURCES) \
-	$(parsepatricssu_SOURCES) $(parserdpssu_SOURCES) \
-	$(parsesilvassu_SOURCES) $(revcomp_SOURCES) $(rna2dna_SOURCES) \
-	$(tandemcount_SOURCES) $(trimfastq_SOURCES)
-DIST_SOURCES = $(bam2cleanfastq_SOURCES) $(checkdupfasq_SOURCES) \
-	$(checkdupfasta_SOURCES) $(cpfasqpart_SOURCES) \
-	$(cpfastapart_SOURCES) $(fastareduceid_SOURCES) \
-	$(fastq2fasta_SOURCES) $(fastq2tab_SOURCES) \
-	$(fastqpick_SOURCES) $(fastqreduceid_SOURCES) \
-	$(fastqstat_SOURCES) $(fishing_SOURCES) $(linearize_SOURCES) \
-	$(parsencbi16s_SOURCES) $(parsencbissu_SOURCES) \
-	$(parsepatricssu_SOURCES) $(parserdpssu_SOURCES) \
-	$(parsesilvassu_SOURCES) $(revcomp_SOURCES) $(rna2dna_SOURCES) \
-	$(tandemcount_SOURCES) $(trimfastq_SOURCES)
+SOURCES = $(cpfasqpart_SOURCES) $(cpfastapart_SOURCES) \
+	$(fastareduceid_SOURCES) $(fastqpick_SOURCES) \
+	$(fastqreduceid_SOURCES) $(fastqstat_SOURCES)
+DIST_SOURCES = $(cpfasqpart_SOURCES) $(cpfastapart_SOURCES) \
+	$(fastareduceid_SOURCES) $(fastqpick_SOURCES) \
+	$(fastqreduceid_SOURCES) $(fastqstat_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -448,37 +355,12 @@ top_srcdir = @top_srcdir@
 AM_CXXFLAGS = $(orpara_CXXFLAGS)
 AM_LDFLAGS = $(orpara_LDFLAGS)
 LDADD = $(orpara_LIBS)
-bam2cleanfastq_SOURCES = bam2cleanfastq.cpp
-bam2cleanfastq_CXXFLAGS = $(AM_CXXFLAGS) $(bam_CXXFLAGS)
-bam2cleanfastq_LDFLAGS = $(AM_LDFLAGS) $(bam_LDFLAGS)
-bam2cleanfastq_LDADD = $(LDADD) $(bam_LIBS)
-checkdupfasq_SOURCES = checkdupfasq.cpp
-checkdupfasta_SOURCES = checkdupfasta.cpp
 cpfasqpart_SOURCES = cpfasqpart.cpp
 cpfastapart_SOURCES = cpfastapart.cpp
 fastareduceid_SOURCES = fastareduceid.cpp
-fastq2fasta_SOURCES = fastq2fasta.cpp
-fastq2tab_SOURCES = fastq2tab.cpp
 fastqpick_SOURCES = fastqpick.cpp
 fastqreduceid_SOURCES = fastqreduceid.cpp
 fastqstat_SOURCES = fastqstat.cpp
-fishing_SOURCES = fishing.cpp 
-fishing_CXXFLAGS = $(AM_CXXFLAGS) $(boost_CXXFLAGS)
-fishing_LDFLAGS = $(AM_LDFLAGS) $(boost_LDFLAGS)
-fishing_LDADD = $(LDADD) $(boost_LIBS)
-linearize_SOURCES = linearize.cpp 
-linearize_CXXFLAGS = $(AM_CXXFLAGS) $(boost_CXXFLAGS)
-linearize_LDFLAGS = $(AM_LDFLAGS) $(boost_LDFLAGS)
-linearize_LDADD = $(LDADD) $(boost_LIBS)
-parsencbi16s_SOURCES = parsencbi16s.cpp
-parsencbissu_SOURCES = parsencbissu.cpp
-parsepatricssu_SOURCES = parsepatricssu.cpp
-parserdpssu_SOURCES = parserdpssu.cpp
-parsesilvassu_SOURCES = parsesilvassu.cpp
-revcomp_SOURCES = revcomp.cpp
-rna2dna_SOURCES = rna2dna.cpp
-tandemcount_SOURCES = tandemcount.cpp
-trimfastq_SOURCES = trimfastq.cpp 
 all: all-am
 
 .SUFFIXES:
@@ -562,18 +444,6 @@ clean-binPROGRAMS:
 	echo " rm -f" $$list; \
 	rm -f $$list
 
-bam2cleanfastq$(EXEEXT): $(bam2cleanfastq_OBJECTS) $(bam2cleanfastq_DEPENDENCIES) $(EXTRA_bam2cleanfastq_DEPENDENCIES) 
-	@rm -f bam2cleanfastq$(EXEEXT)
-	$(AM_V_CXXLD)$(bam2cleanfastq_LINK) $(bam2cleanfastq_OBJECTS) $(bam2cleanfastq_LDADD) $(LIBS)
-
-checkdupfasq$(EXEEXT): $(checkdupfasq_OBJECTS) $(checkdupfasq_DEPENDENCIES) $(EXTRA_checkdupfasq_DEPENDENCIES) 
-	@rm -f checkdupfasq$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(checkdupfasq_OBJECTS) $(checkdupfasq_LDADD) $(LIBS)
-
-checkdupfasta$(EXEEXT): $(checkdupfasta_OBJECTS) $(checkdupfasta_DEPENDENCIES) $(EXTRA_checkdupfasta_DEPENDENCIES) 
-	@rm -f checkdupfasta$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(checkdupfasta_OBJECTS) $(checkdupfasta_LDADD) $(LIBS)
-
 cpfasqpart$(EXEEXT): $(cpfasqpart_OBJECTS) $(cpfasqpart_DEPENDENCIES) $(EXTRA_cpfasqpart_DEPENDENCIES) 
 	@rm -f cpfasqpart$(EXEEXT)
 	$(AM_V_CXXLD)$(CXXLINK) $(cpfasqpart_OBJECTS) $(cpfasqpart_LDADD) $(LIBS)
@@ -585,14 +455,6 @@ cpfastapart$(EXEEXT): $(cpfastapart_OBJECTS) $(cpfastapart_DEPENDENCIES) $(EXTRA
 fastareduceid$(EXEEXT): $(fastareduceid_OBJECTS) $(fastareduceid_DEPENDENCIES) $(EXTRA_fastareduceid_DEPENDENCIES) 
 	@rm -f fastareduceid$(EXEEXT)
 	$(AM_V_CXXLD)$(CXXLINK) $(fastareduceid_OBJECTS) $(fastareduceid_LDADD) $(LIBS)
-
-fastq2fasta$(EXEEXT): $(fastq2fasta_OBJECTS) $(fastq2fasta_DEPENDENCIES) $(EXTRA_fastq2fasta_DEPENDENCIES) 
-	@rm -f fastq2fasta$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(fastq2fasta_OBJECTS) $(fastq2fasta_LDADD) $(LIBS)
-
-fastq2tab$(EXEEXT): $(fastq2tab_OBJECTS) $(fastq2tab_DEPENDENCIES) $(EXTRA_fastq2tab_DEPENDENCIES) 
-	@rm -f fastq2tab$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(fastq2tab_OBJECTS) $(fastq2tab_LDADD) $(LIBS)
 
 fastqpick$(EXEEXT): $(fastqpick_OBJECTS) $(fastqpick_DEPENDENCIES) $(EXTRA_fastqpick_DEPENDENCIES) 
 	@rm -f fastqpick$(EXEEXT)
@@ -606,78 +468,18 @@ fastqstat$(EXEEXT): $(fastqstat_OBJECTS) $(fastqstat_DEPENDENCIES) $(EXTRA_fastq
 	@rm -f fastqstat$(EXEEXT)
 	$(AM_V_CXXLD)$(CXXLINK) $(fastqstat_OBJECTS) $(fastqstat_LDADD) $(LIBS)
 
-fishing$(EXEEXT): $(fishing_OBJECTS) $(fishing_DEPENDENCIES) $(EXTRA_fishing_DEPENDENCIES) 
-	@rm -f fishing$(EXEEXT)
-	$(AM_V_CXXLD)$(fishing_LINK) $(fishing_OBJECTS) $(fishing_LDADD) $(LIBS)
-
-linearize$(EXEEXT): $(linearize_OBJECTS) $(linearize_DEPENDENCIES) $(EXTRA_linearize_DEPENDENCIES) 
-	@rm -f linearize$(EXEEXT)
-	$(AM_V_CXXLD)$(linearize_LINK) $(linearize_OBJECTS) $(linearize_LDADD) $(LIBS)
-
-parsencbi16s$(EXEEXT): $(parsencbi16s_OBJECTS) $(parsencbi16s_DEPENDENCIES) $(EXTRA_parsencbi16s_DEPENDENCIES) 
-	@rm -f parsencbi16s$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(parsencbi16s_OBJECTS) $(parsencbi16s_LDADD) $(LIBS)
-
-parsencbissu$(EXEEXT): $(parsencbissu_OBJECTS) $(parsencbissu_DEPENDENCIES) $(EXTRA_parsencbissu_DEPENDENCIES) 
-	@rm -f parsencbissu$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(parsencbissu_OBJECTS) $(parsencbissu_LDADD) $(LIBS)
-
-parsepatricssu$(EXEEXT): $(parsepatricssu_OBJECTS) $(parsepatricssu_DEPENDENCIES) $(EXTRA_parsepatricssu_DEPENDENCIES) 
-	@rm -f parsepatricssu$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(parsepatricssu_OBJECTS) $(parsepatricssu_LDADD) $(LIBS)
-
-parserdpssu$(EXEEXT): $(parserdpssu_OBJECTS) $(parserdpssu_DEPENDENCIES) $(EXTRA_parserdpssu_DEPENDENCIES) 
-	@rm -f parserdpssu$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(parserdpssu_OBJECTS) $(parserdpssu_LDADD) $(LIBS)
-
-parsesilvassu$(EXEEXT): $(parsesilvassu_OBJECTS) $(parsesilvassu_DEPENDENCIES) $(EXTRA_parsesilvassu_DEPENDENCIES) 
-	@rm -f parsesilvassu$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(parsesilvassu_OBJECTS) $(parsesilvassu_LDADD) $(LIBS)
-
-revcomp$(EXEEXT): $(revcomp_OBJECTS) $(revcomp_DEPENDENCIES) $(EXTRA_revcomp_DEPENDENCIES) 
-	@rm -f revcomp$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(revcomp_OBJECTS) $(revcomp_LDADD) $(LIBS)
-
-rna2dna$(EXEEXT): $(rna2dna_OBJECTS) $(rna2dna_DEPENDENCIES) $(EXTRA_rna2dna_DEPENDENCIES) 
-	@rm -f rna2dna$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(rna2dna_OBJECTS) $(rna2dna_LDADD) $(LIBS)
-
-tandemcount$(EXEEXT): $(tandemcount_OBJECTS) $(tandemcount_DEPENDENCIES) $(EXTRA_tandemcount_DEPENDENCIES) 
-	@rm -f tandemcount$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(tandemcount_OBJECTS) $(tandemcount_LDADD) $(LIBS)
-
-trimfastq$(EXEEXT): $(trimfastq_OBJECTS) $(trimfastq_DEPENDENCIES) $(EXTRA_trimfastq_DEPENDENCIES) 
-	@rm -f trimfastq$(EXEEXT)
-	$(AM_V_CXXLD)$(CXXLINK) $(trimfastq_OBJECTS) $(trimfastq_LDADD) $(LIBS)
-
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
 
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/bam2cleanfastq-bam2cleanfastq.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/checkdupfasq.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/checkdupfasta.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpfasqpart.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpfastapart.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fastareduceid.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fastq2fasta.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fastq2tab.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fastqpick.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fastqreduceid.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fastqstat.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/fishing-fishing.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/linearize-linearize.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/parsencbi16s.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/parsencbissu.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/parsepatricssu.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/parserdpssu.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/parsesilvassu.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/revcomp.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/rna2dna.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/tandemcount.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/trimfastq.Po@am__quote@
 
 .cpp.o:
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -699,48 +501,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='$<' object='$@' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LTCXXCOMPILE) -c -o $@ $<
-
-bam2cleanfastq-bam2cleanfastq.o: bam2cleanfastq.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(bam2cleanfastq_CXXFLAGS) $(CXXFLAGS) -MT bam2cleanfastq-bam2cleanfastq.o -MD -MP -MF $(DEPDIR)/bam2cleanfastq-bam2cleanfastq.Tpo -c -o bam2cleanfastq-bam2cleanfastq.o `test -f 'bam2cleanfastq.cpp' || echo '$(srcdir)/'`bam2cleanfastq.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bam2cleanfastq-bam2cleanfastq.Tpo $(DEPDIR)/bam2cleanfastq-bam2cleanfastq.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bam2cleanfastq.cpp' object='bam2cleanfastq-bam2cleanfastq.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(bam2cleanfastq_CXXFLAGS) $(CXXFLAGS) -c -o bam2cleanfastq-bam2cleanfastq.o `test -f 'bam2cleanfastq.cpp' || echo '$(srcdir)/'`bam2cleanfastq.cpp
-
-bam2cleanfastq-bam2cleanfastq.obj: bam2cleanfastq.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(bam2cleanfastq_CXXFLAGS) $(CXXFLAGS) -MT bam2cleanfastq-bam2cleanfastq.obj -MD -MP -MF $(DEPDIR)/bam2cleanfastq-bam2cleanfastq.Tpo -c -o bam2cleanfastq-bam2cleanfastq.obj `if test -f 'bam2cleanfastq.cpp'; then $(CYGPATH_W) 'bam2cleanfastq.cpp'; else $(CYGPATH_W) '$(srcdir)/bam2cleanfastq.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/bam2cleanfastq-bam2cleanfastq.Tpo $(DEPDIR)/bam2cleanfastq-bam2cleanfastq.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='bam2cleanfastq.cpp' object='bam2cleanfastq-bam2cleanfastq.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(bam2cleanfastq_CXXFLAGS) $(CXXFLAGS) -c -o bam2cleanfastq-bam2cleanfastq.obj `if test -f 'bam2cleanfastq.cpp'; then $(CYGPATH_W) 'bam2cleanfastq.cpp'; else $(CYGPATH_W) '$(srcdir)/bam2cleanfastq.cpp'; fi`
-
-fishing-fishing.o: fishing.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fishing_CXXFLAGS) $(CXXFLAGS) -MT fishing-fishing.o -MD -MP -MF $(DEPDIR)/fishing-fishing.Tpo -c -o fishing-fishing.o `test -f 'fishing.cpp' || echo '$(srcdir)/'`fishing.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/fishing-fishing.Tpo $(DEPDIR)/fishing-fishing.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='fishing.cpp' object='fishing-fishing.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fishing_CXXFLAGS) $(CXXFLAGS) -c -o fishing-fishing.o `test -f 'fishing.cpp' || echo '$(srcdir)/'`fishing.cpp
-
-fishing-fishing.obj: fishing.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fishing_CXXFLAGS) $(CXXFLAGS) -MT fishing-fishing.obj -MD -MP -MF $(DEPDIR)/fishing-fishing.Tpo -c -o fishing-fishing.obj `if test -f 'fishing.cpp'; then $(CYGPATH_W) 'fishing.cpp'; else $(CYGPATH_W) '$(srcdir)/fishing.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/fishing-fishing.Tpo $(DEPDIR)/fishing-fishing.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='fishing.cpp' object='fishing-fishing.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(fishing_CXXFLAGS) $(CXXFLAGS) -c -o fishing-fishing.obj `if test -f 'fishing.cpp'; then $(CYGPATH_W) 'fishing.cpp'; else $(CYGPATH_W) '$(srcdir)/fishing.cpp'; fi`
-
-linearize-linearize.o: linearize.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(linearize_CXXFLAGS) $(CXXFLAGS) -MT linearize-linearize.o -MD -MP -MF $(DEPDIR)/linearize-linearize.Tpo -c -o linearize-linearize.o `test -f 'linearize.cpp' || echo '$(srcdir)/'`linearize.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/linearize-linearize.Tpo $(DEPDIR)/linearize-linearize.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='linearize.cpp' object='linearize-linearize.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(linearize_CXXFLAGS) $(CXXFLAGS) -c -o linearize-linearize.o `test -f 'linearize.cpp' || echo '$(srcdir)/'`linearize.cpp
-
-linearize-linearize.obj: linearize.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(linearize_CXXFLAGS) $(CXXFLAGS) -MT linearize-linearize.obj -MD -MP -MF $(DEPDIR)/linearize-linearize.Tpo -c -o linearize-linearize.obj `if test -f 'linearize.cpp'; then $(CYGPATH_W) 'linearize.cpp'; else $(CYGPATH_W) '$(srcdir)/linearize.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/linearize-linearize.Tpo $(DEPDIR)/linearize-linearize.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='linearize.cpp' object='linearize-linearize.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(linearize_CXXFLAGS) $(CXXFLAGS) -c -o linearize-linearize.obj `if test -f 'linearize.cpp'; then $(CYGPATH_W) 'linearize.cpp'; else $(CYGPATH_W) '$(srcdir)/linearize.cpp'; fi`
 
 mostlyclean-libtool:
 	-rm -f *.lo

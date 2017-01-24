@@ -1,9 +1,9 @@
 bin_PROGRAMS = cpfasqpart cpfastapart fastareduceid fastqpick \
 	 fastqreduceid fastqstat 
 
-#AM_CXXFLAGS=$(orpara_CXXFLAGS)
-#AM_LDFLAGS=$(orpara_LDFLAGS)
-#LDADD=$(orpara_LIBS)
+AM_CXXFLAGS=$(orpara_CXXFLAGS)
+AM_LDFLAGS=$(orpara_LDFLAGS)
+LDADD=$(orpara_LIBS)
 
 cpfasqpart_SOURCES = cpfasqpart.cpp
 cpfastapart_SOURCES = cpfastapart.cpp

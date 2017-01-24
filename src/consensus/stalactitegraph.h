@@ -4,6 +4,9 @@
 // (C) 2016 Kemin Zhou at Roche
 // Added to the consensus library for plotting graphics output
 // This is a simple wrapper for the gnu plotutils library
+// Not sure this is a good design by adding another component
+// into a exisitng class: consensus.
+// This simply speed up programming.
 
 #include <plotter.h>
 #include <string>
@@ -21,6 +24,9 @@ enum PlotFileType {
 
 /**
  * Draw base vertical coverage plot for each cluster.
+ * This addition of this may not be a good idea because
+ * it add new dependency for the old class. Future design
+ * should seek to remove this component from the base class.
  */
 class StalactiteGraph {
    public:
