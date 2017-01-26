@@ -1,3 +1,4 @@
+// (C) 2012 Kemin Zhou at orpara.com
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
@@ -13,11 +14,11 @@ using namespace orpara;
 void filemap(ostream &ous, const map<int,int>& lens);
 string buildOutputName(const string &infile, const string &tag);
 void usage() {
-   cerr << "Usage: fastqreduceid --prefix ccs input-fastqfile outputfile\n";
+   cerr << "Usage: fastqreduceid --prefix tag input-fastqfile outputfile\n";
    cerr << "Or fastqreduceid -i input-fastqfile -o outputfile\n"
       << "Options:\n"
       << "   -p or --prefix new prefix for the sequence ids\n"
-      << "      The prefix can be any string.  Default is ccs\n"
+      << "      The prefix can be any string.  Default is tag\n"
       << "   -i input fastq file\n"
       << "   -o output fastq file. If not given this program will generate one for you.\n"
       << "   --help or ? will print this message\n"
@@ -31,7 +32,7 @@ void usage() {
  * This simulate the behavior of database serial id.
  */
 int main(int argc, char* argv[]) {
-   string infile, outfile, prefix="ccs";
+   string infile, outfile, prefix="tag";
    int i=1;
    while (i < argc) {
       if (string(argv[i]) == "-i") infile = argv[++i];

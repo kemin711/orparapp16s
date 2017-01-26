@@ -1,3 +1,4 @@
+// (C) Kemin Zhou 2012 at orpara.com
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
@@ -61,7 +62,9 @@ void pickByIdFile(const string &infile, const string &idlistfile, const string &
 
 
 /**
- * Now pick fastq sequences by length. Can add more features later.
+ * Helper program to copy fastq sequence by
+ * given list of id, Phred score, accuracy, or length.
+ * Other features of sequence could be added.
  */
 int main(int argc, char* argv[]) {
    string infile, outfile, idlistFile;

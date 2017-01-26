@@ -1,3 +1,4 @@
+// (C) 2011 Kemin Zhou at orpara.com
 #include <cstring>
 #include <iostream>
 #include <fstream>
@@ -19,11 +20,17 @@ string nameOut(const string &infname, const string &prefix) {
 }
 
 void usage() {
-   cerr << "Usage: fastareduceid --prefix ccs -i input.fasta -o output.fasta\n"
+   cerr << "Usage: fastareduceid --prefix tag -i input.fasta -o output.fasta\n"
       << " or fastreduceid -p newprefix input.fasta output.fasta\n";
    exit(1);
 }
 
+/** 
+ * Sequencers tends to produce very long sequence names
+ * This can make sequence objects occupying large amounts
+ * of memory. In making the ids shorter, we can gain
+ * performance.
+ */
 int main(int argc, char* argv[]) {
    string infile, outfile, prefix;
    int i=1;
@@ -44,7 +51,7 @@ int main(int argc, char* argv[]) {
       ++i;
    }
    if (infile.empty()) usage();
-   if (prefix.empty()) prefix="ccs";
+   if (prefix.empty()) prefix="TAG";
    if (outfile.empty()) outfile=nameOut(infile, prefix);
    cerr << "input file: " << infile << " output file: " << outfile << endl;
 

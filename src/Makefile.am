@@ -10,4 +10,4 @@
 #noinst_LTLIBRARIES = liborparappcommon.la
 #liborparappcommon_la_SOURCES = $(headers) $(sources)
 
-SUBDIRS = . consensus seqana seqconv test
+SUBDIRS = . consensus seqconv test

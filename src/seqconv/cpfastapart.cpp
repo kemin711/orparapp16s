@@ -1,3 +1,5 @@
+// (C) 2012 Kemin Zhou at orpara.com
+// for sampling of fasta files
 #include <iostream>
 #include <fstream>
 #include <cstdlib>

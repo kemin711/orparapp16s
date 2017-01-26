@@ -1,3 +1,5 @@
+// (C) 2008 Kemin Zhou @orpara.com
+// Change U to T
 #include <cstring>
 #include <iostream>
 #include <fstream>

@@ -1,3 +1,6 @@
+// (C) 2012 Kemin Zhou at orapra.com
+// for random and fixed sampling of fastq sequences
+// from a file
 #include <iostream>
 #include <fstream>
 #include <cstdlib>

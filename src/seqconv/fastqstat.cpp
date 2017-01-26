@@ -1,3 +1,4 @@
+// (C) 2012 Kemin Zhou at orpara.com
 #include <fstream>
 #include <iostream>
 #include <cstdlib>
@@ -21,6 +22,9 @@ void usage() {
 void filemap(ostream &ous, const map<int,int>& lens);
 string buildOutputName(const string &infile, const string &suffix);
 
+/**
+ * helper program to get length info from a fastq file
+ */
 int main(int argc, char* argv[]) {
    string infile, outfile;
    string lenfile; //("length.dis");
