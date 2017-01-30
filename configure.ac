@@ -79,6 +79,11 @@ save_LDFLAGS=$LDFLAGS
 bam_LIBS="-lbamtools"
 bam_CXXFLAGS="-I$prefix/include/bamtools"
 bam_LDFLAGS="-L$prefix/lib/bamtools"
+if test "$prefix" != "/usr/local"; then
+	bam_CXXFLAGS="$bam_CXXFLAGS -I/usr/local/include/bamtools"
+	bam_LDFLAGS="$bam_LDFLAGS -L/usr/local/lib/bamtools"
+fi
+
 AC_ARG_VAR([BAMTOOLSINC], [path for bamtools include dir, canb environment variable or confg variable])
 AC_ARG_VAR([BAMTOOLSLIB], [path for bamtools lib dir])
 if test -n "$BAMTOOLSINC"; then 
@@ -111,6 +116,10 @@ save_LDFLAGS=$LDFLAGS
 boost_LIBS="-lboost_program_options"
 boost_CXXFLAGS="-I$prefix/include/boost"
 boost_LDFLAGS="-L$prefix/lib"
+if test "$prefix" != "/usr/local"; then
+	boost_CXXFLAGS="$boost_CXXFLAGS -I/usr/local/include/boost"
+	boost_LDFLAGS="$boost_LDFLAGS -L/usr/local/lib"
+fi
 AC_ARG_VAR([BOOSTINC], [PATH for boost include dir, canb environment variable or confg variable])
 AC_ARG_VAR([BOOSTLIB], [PATH for boost lib dir])
 if (test -n "$BOOSTINC"); then 

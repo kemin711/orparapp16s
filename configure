@@ -18387,6 +18387,11 @@ save_LDFLAGS=$LDFLAGS
 bam_LIBS="-lbamtools"
 bam_CXXFLAGS="-I$prefix/include/bamtools"
 bam_LDFLAGS="-L$prefix/lib/bamtools"
+if test "$prefix" != "/usr/local"; then
+	bam_CXXFLAGS="$bam_CXXFLAGS -I/usr/local/include/bamtools"
+	bam_LDFLAGS="$bam_LDFLAGS -L/usr/local/lib/bamtools"
+fi
+
 
 
 if test -n "$BAMTOOLSINC"; then
@@ -18447,6 +18452,10 @@ save_LDFLAGS=$LDFLAGS
 boost_LIBS="-lboost_program_options"
 boost_CXXFLAGS="-I$prefix/include/boost"
 boost_LDFLAGS="-L$prefix/lib"
+if test "$prefix" != "/usr/local"; then
+	boost_CXXFLAGS="$boost_CXXFLAGS -I/usr/local/include/boost"
+	boost_LDFLAGS="$boost_LDFLAGS -L/usr/local/lib"
+fi
 
 
 if (test -n "$BOOSTINC"); then

@@ -864,15 +864,15 @@ configure:18212: $? = 0
 configure:18221: result: yes
 configure:18365: g++ -std=c++11 -o conftest -I/usr/local/include -g -O2  -L/usr/local/lib  conftest.cpp  -lgtest -lgtest_main -lgmock -lgmock_main -lpthread >&5
 configure:18365: $? = 0
-configure:18404: checking api/BamReader.h usability
-configure:18404: g++ -std=c++11 -c -I/usr/local/include/bamtools -g -O2  conftest.cpp >&5
-configure:18404: $? = 0
-configure:18404: result: yes
-configure:18404: checking api/BamReader.h presence
-configure:18404: g++ -E -std=c++11  conftest.cpp
+configure:18409: checking api/BamReader.h usability
+configure:18409: g++ -std=c++11 -c -I/usr/local/include/bamtools -g -O2  conftest.cpp >&5
+configure:18409: $? = 0
+configure:18409: result: yes
+configure:18409: checking api/BamReader.h presence
+configure:18409: g++ -E -std=c++11  conftest.cpp
 conftest.cpp:26:27: fatal error: api/BamReader.h: No such file or directory
 compilation terminated.
-configure:18404: $? = 1
+configure:18409: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "orparapp16s"
@@ -900,25 +900,25 @@ configure: failed program was:
 | #define HAVE_PTHREAD 1
 | /* end confdefs.h.  */
 | #include <api/BamReader.h>
-configure:18404: result: no
-configure:18404: WARNING: api/BamReader.h: accepted by the compiler, rejected by the preprocessor!
-configure:18404: WARNING: api/BamReader.h: proceeding with the compiler's result
-configure:18404: checking for api/BamReader.h
-configure:18404: result: yes
-configure:18427: g++ -std=c++11 -o conftest -I/usr/local/include/bamtools -g -O2  -L/usr/local/lib/bamtools  conftest.cpp  -lbamtools >&5
-configure:18427: $? = 0
-configure:18472: g++ -std=c++11 -o conftest -I/usr/local/include/boost -g -O2  -L/usr/local/lib  conftest.cpp  -lboost_program_options >&5
-configure:18472: $? = 0
-configure:18486: found boost
-configure:18510: checking bioseq.h usability
-configure:18510: g++ -std=c++11 -c -I/usr/local/include/orpara16s -g -O2  conftest.cpp >&5
-configure:18510: $? = 0
-configure:18510: result: yes
-configure:18510: checking bioseq.h presence
-configure:18510: g++ -E -std=c++11  conftest.cpp
+configure:18409: result: no
+configure:18409: WARNING: api/BamReader.h: accepted by the compiler, rejected by the preprocessor!
+configure:18409: WARNING: api/BamReader.h: proceeding with the compiler's result
+configure:18409: checking for api/BamReader.h
+configure:18409: result: yes
+configure:18432: g++ -std=c++11 -o conftest -I/usr/local/include/bamtools -g -O2  -L/usr/local/lib/bamtools  conftest.cpp  -lbamtools >&5
+configure:18432: $? = 0
+configure:18481: g++ -std=c++11 -o conftest -I/usr/local/include/boost -g -O2  -L/usr/local/lib  conftest.cpp  -lboost_program_options >&5
+configure:18481: $? = 0
+configure:18495: found boost
+configure:18519: checking bioseq.h usability
+configure:18519: g++ -std=c++11 -c -I/usr/local/include/orpara16s -g -O2  conftest.cpp >&5
+configure:18519: $? = 0
+configure:18519: result: yes
+configure:18519: checking bioseq.h presence
+configure:18519: g++ -E -std=c++11  conftest.cpp
 conftest.cpp:27:20: fatal error: bioseq.h: No such file or directory
 compilation terminated.
-configure:18510: $? = 1
+configure:18519: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "orparapp16s"
@@ -947,30 +947,30 @@ configure: failed program was:
 | #define HAVE_API_BAMREADER_H 1
 | /* end confdefs.h.  */
 | #include <bioseq.h>
-configure:18510: result: no
-configure:18510: WARNING: bioseq.h: accepted by the compiler, rejected by the preprocessor!
-configure:18510: WARNING: bioseq.h: proceeding with the compiler's result
-configure:18510: checking for bioseq.h
-configure:18510: result: yes
-configure:18533: g++ -std=c++11 -o conftest -I/usr/local/include/orpara16s -g -O2  -L/usr/local/lib  conftest.cpp   >&5
-configure:18533: $? = 0
-configure:18577: g++ -std=c++11 -o conftest -I/usr/local/include -g -O2  -L/usr/local/lib  conftest.cpp  -lplotter -lXaw -lXmu -lXt -lSM -lICE -lXext -lX11 -lpng -lz -lm >&5
-configure:18577: $? = 0
-configure:18600: checking for string.h
-configure:18600: result: yes
-configure:18612: checking for stdbool.h that conforms to C99
-configure:18679: gcc -c -g -O2  conftest.c >&5
-configure:18679: $? = 0
-configure:18686: result: yes
-configure:18688: checking for _Bool
+configure:18519: result: no
+configure:18519: WARNING: bioseq.h: accepted by the compiler, rejected by the preprocessor!
+configure:18519: WARNING: bioseq.h: proceeding with the compiler's result
+configure:18519: checking for bioseq.h
+configure:18519: result: yes
+configure:18542: g++ -std=c++11 -o conftest -I/usr/local/include/orpara16s -g -O2  -L/usr/local/lib  conftest.cpp   >&5
+configure:18542: $? = 0
+configure:18586: g++ -std=c++11 -o conftest -I/usr/local/include -g -O2  -L/usr/local/lib  conftest.cpp  -lplotter -lXaw -lXmu -lXt -lSM -lICE -lXext -lX11 -lpng -lz -lm >&5
+configure:18586: $? = 0
+configure:18609: checking for string.h
+configure:18609: result: yes
+configure:18621: checking for stdbool.h that conforms to C99
 configure:18688: gcc -c -g -O2  conftest.c >&5
 configure:18688: $? = 0
-configure:18688: gcc -c -g -O2  conftest.c >&5
+configure:18695: result: yes
+configure:18697: checking for _Bool
+configure:18697: gcc -c -g -O2  conftest.c >&5
+configure:18697: $? = 0
+configure:18697: gcc -c -g -O2  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:65:20: error: expected expression before ')' token
  if (sizeof ((_Bool)))
                     ^
-configure:18688: $? = 1
+configure:18697: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "orparapp16s"
@@ -1041,16 +1041,16 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:18688: result: yes
-configure:18699: checking for int8_t
-configure:18699: gcc -c -g -O2  conftest.c >&5
-configure:18699: $? = 0
-configure:18699: gcc -c -g -O2  conftest.c >&5
+configure:18697: result: yes
+configure:18708: checking for int8_t
+configure:18708: gcc -c -g -O2  conftest.c >&5
+configure:18708: $? = 0
+configure:18708: gcc -c -g -O2  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:67:12: error: size of array 'test_array' is negative
  static int test_array [1 - 2 * !((int8_t) (((((int8_t) 1 << N) << N) - 1) * 2 + 1)
             ^
-configure:18699: $? = 1
+configure:18708: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "orparapp16s"
@@ -1126,16 +1126,16 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:18699: result: yes
-configure:18710: checking for size_t
-configure:18710: gcc -c -g -O2  conftest.c >&5
-configure:18710: $? = 0
-configure:18710: gcc -c -g -O2  conftest.c >&5
+configure:18708: result: yes
+configure:18719: checking for size_t
+configure:18719: gcc -c -g -O2  conftest.c >&5
+configure:18719: $? = 0
+configure:18719: gcc -c -g -O2  conftest.c >&5
 conftest.c: In function 'main':
 conftest.c:66:21: error: expected expression before ')' token
  if (sizeof ((size_t)))
                      ^
-configure:18710: $? = 1
+configure:18719: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "orparapp16s"
@@ -1207,16 +1207,16 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:18710: result: yes
-configure:18726: checking for floor
-configure:18726: gcc -o conftest -g -O2   conftest.c  >&5
+configure:18719: result: yes
+configure:18735: checking for floor
+configure:18735: gcc -o conftest -g -O2   conftest.c  >&5
 conftest.c:53:6: warning: conflicting types for built-in function 'floor'
  char floor ();
       ^
-/tmp/ccmiZHzb.o: In function `main':
+/tmp/cc2B9AZk.o: In function `main':
 /home/kzhou/coding/orparapp16s/conftest.c:64: undefined reference to `floor'
 collect2: error: ld returned 1 exit status
-configure:18726: $? = 1
+configure:18735: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "orparapp16s"
@@ -1285,20 +1285,20 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:18726: result: no
-configure:18726: checking for mkdir
-configure:18726: gcc -o conftest -g -O2   conftest.c  >&5
-configure:18726: $? = 0
-configure:18726: result: yes
-configure:18726: checking for pow
-configure:18726: gcc -o conftest -g -O2   conftest.c  >&5
+configure:18735: result: no
+configure:18735: checking for mkdir
+configure:18735: gcc -o conftest -g -O2   conftest.c  >&5
+configure:18735: $? = 0
+configure:18735: result: yes
+configure:18735: checking for pow
+configure:18735: gcc -o conftest -g -O2   conftest.c  >&5
 conftest.c:54:6: warning: conflicting types for built-in function 'pow'
  char pow ();
       ^
-/tmp/cc2KyZkg.o: In function `main':
+/tmp/ccLxKK8p.o: In function `main':
 /home/kzhou/coding/orparapp16s/conftest.c:65: undefined reference to `pow'
 collect2: error: ld returned 1 exit status
-configure:18726: $? = 1
+configure:18735: $? = 1
 configure: failed program was:
 | /* confdefs.h */
 | #define PACKAGE_NAME "orparapp16s"
@@ -1368,24 +1368,24 @@ configure: failed program was:
 |   ;
 |   return 0;
 | }
-configure:18726: result: no
-configure:18726: checking for strchr
-configure:18726: gcc -o conftest -g -O2   conftest.c  >&5
+configure:18735: result: no
+configure:18735: checking for strchr
+configure:18735: gcc -o conftest -g -O2   conftest.c  >&5
 conftest.c:54:6: warning: conflicting types for built-in function 'strchr'
  char strchr ();
       ^
-configure:18726: $? = 0
-configure:18726: result: yes
-configure:18726: checking for strstr
-configure:18726: gcc -o conftest -g -O2   conftest.c  >&5
+configure:18735: $? = 0
+configure:18735: result: yes
+configure:18735: checking for strstr
+configure:18735: gcc -o conftest -g -O2   conftest.c  >&5
 conftest.c:55:6: warning: conflicting types for built-in function 'strstr'
  char strstr ();
       ^
-configure:18726: $? = 0
-configure:18726: result: yes
-configure:18847: checking that generated files are newer than configure
-configure:18853: result: done
-configure:18884: creating ./config.status
+configure:18735: $? = 0
+configure:18735: result: yes
+configure:18856: checking that generated files are newer than configure
+configure:18862: result: done
+configure:18893: creating ./config.status
 
 ## ---------------------- ##
 ## Running config.status. ##
